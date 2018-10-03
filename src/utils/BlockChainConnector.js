@@ -11,10 +11,6 @@ class BlockChainConnector {
    
   constructor() {
     web3 = window.web3;
-    
-  
-
-    
   }
 
   provider() {
