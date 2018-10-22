@@ -1,0 +1,337 @@
+/*
+font-family: 'Lato', sans-serif;
+*/
+
+body{
+    font-family: 'Lato', sans-serif;
+}
+
+a{
+    color: #9013FE;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+form{
+    margin: 0;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+}
+.widthContain{
+    width: 90%;
+    max-width: 1440px;
+    margin: auto;
+}
+
+
+.common{
+    background: #fff;
+}
+.common header{
+    background: #fff;
+    border-bottom:solid 1px #E5E5E5;
+    text-align: center;
+    padding: 12px 0;
+}
+.common h1{
+    float: left;
+    width: 203px;
+    height: 27px;
+    margin: 0;
+    padding: 12px 0;
+}
+.common h1 a{
+    display: block;
+    background: url(../images/Shivom_Logo_Gradient.png) no-repeat;
+    text-indent: -9999px;
+    overflow: hidden;
+}
+.common .navigation{
+    margin: auto;
+    text-align: center;
+    width: 50%;
+    display: inline-block;
+    padding: 18px 0;
+}
+.common .navigation li{
+    display: inline;
+}
+.common .navigation li a{
+    display: inline-block;
+    font: 14px 'Lato', sans-serif;
+    color: #6A6A6A;
+    padding: 0 10px;
+    margin: 0 10px;
+    text-transform: uppercase;
+}
+.common .navigation li.active a{
+    color: #BD10E0;
+    font-weight: bold;
+}
+.common .profilePic img{
+    vertical-align: middle;
+}
+.common .profile{
+    float: right;
+    padding: 0;
+}
+.profile .profilePic{
+    float: left;
+    position: relative;
+}
+.profilePic a.optionsP:after{
+    content: "";
+    width: 22px;
+    height: 12px;
+    background: url(../images/more-icon.png) no-repeat;
+    display: inline-block;
+}
+.profilePic .profileMenu{
+    display: none;
+    position: absolute;
+    top:100%;
+    right: 0;
+    padding:15px 0;
+    margin: 0;
+    list-style: none;
+    z-index: 999;
+}
+.profilePic .profileMenu li{
+    background: #fff;
+    width: 300px;
+    text-align: left;
+}
+.profilePic .profileMenu li a{
+    padding: 15px;
+    padding-left: 70px;
+    display: block;
+    border: solid 1px #979797;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    text-transform: uppercase;
+    font: 14px 'Lato', sans-serif;
+    color: #6A6A6A;
+    background: center left no-repeat;
+}
+.profilePic .profileMenu li.searchSM a{
+    background-image: url(../images/search.png);
+}
+.profilePic .profileMenu li.postDataSM a{
+    background-image: url(../images/postad.png);
+}
+.profilePic .profileMenu li.walletSM a{
+    background-image: url(../images/wallet.png);
+}
+.profilePic .profileMenu li.profileSM a{
+    background-image: url(../images/profile-icon.png);
+}
+.profilePic .profileMenu li.notifSM a{
+    background-image: url(../images/notif-icon.png);
+}
+.profilePic .profileMenu li.logoutSM a{
+    background-image: url(../images/logout-icon.png);
+}
+
+
+.profilePic .profileMenu li a:hover{
+    border-top-color:#979797; 
+    border-bottom-color:#979797;     
+    background-color: #F1F1F1;
+    text-decoration: none;
+}
+.profilePic .profileMenu li:first-child a{
+    border-top: 1px solid #979797; 
+}
+.profilePic .profileMenu li:last-child a{
+    border-bottom: 1px solid #979797;
+}
+
+.profilePic:hover .profileMenu{
+    display: block;
+}
+.introduction{
+    padding: 28px 0;
+    text-align: center;
+    margin: auto;
+    border-bottom: solid 1px #E5E5E5;
+}
+.introduction h2{
+    font: 300 28px 'Lato', sans-serif;
+    color: #252525;
+    padding: 0;
+    margin: 0;
+}
+.introduction p{
+    font: 300 18px 'Lato', sans-serif;
+    margin: 10px auto;
+}
+.notif{
+    padding: 18px 0;
+    display: inline-block;
+    font: 14px 'Lato',sans-serif;
+    color: #6A6A6A;
+    padding-left: 30px;
+    margin-left: 12px;
+    background: url(../images/notifs.png) left center no-repeat;
+}
+
+.tabWidth{
+    max-width: 665px;
+    width: 80%;
+    margin: auto;
+}
+.main-content{
+    margin: 60px 0;
+}
+
+.common div input.buttonP{
+    background-image: linear-gradient(90deg, #8A23AE 0%, #0043FF 100%, #DB51EC 100%);
+    border-radius: 30px;
+    font:600 16px 'Lato', sans-serif;
+    color: #fff;
+    border-radius: 30px;
+    width: 100%;
+     border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.common footer{
+    border-top: solid 1px #D6D6D6;
+}
+.common footer .copy{
+    float: right;
+    font-size: 14px;
+    color: #6A6A6A;
+}
+.common footer nav{
+    float: left;
+}
+.common .hamburgerMenu{
+    display: none;
+}
+
+.error label{
+    color: #FF3F3F;
+}
+.error input{
+    border-color: #FF3F3F;
+    background: url(../images/error-icon.png) center right no-repeat;
+}
+
+.error input.checkboxS{
+    outline: solid 1px #FF3F3F;
+    border: none;
+    background: none;
+}
+.error input.checkboxS:checked{
+    background: url(../images/checked-box.png) center center no-repeat;
+}
+.error.iagree label{
+    background: url(../images/error-icon.png) center right no-repeat;
+    padding-right: 13%;
+    width: 76%;
+}
+input.submitS:disabled,
+.common input.buttonP:disabled{
+    opacity: 0.51;
+    cursor: default;
+}
+.leftAlign{
+    text-align: left;
+}
+@media only screen and (max-width: 1024px){
+    .common .navigation li a{
+        padding: 0 5px;
+        margin: 0 5px;
+    }
+    .common .navigation{
+        width: 40%;
+    }
+    .widthContain{
+        width: 95%;
+    }
+    .common header{
+        border-bottom-color: #e6e6e6;
+    }
+}
+@media only screen and (max-width:768px){
+    .tabWidth{
+        width: 90%;
+    }
+    .widthContain{
+        width: 90%;
+    }
+    .common .navigation,
+    .common .profile{
+        display: none;
+    }
+    .main-content{
+        margin: 26px 0;
+    }
+    .common .hamburgerMenu{
+        display: block;
+        float: right;
+        width: 36px;
+        height: 25px;
+        background: url(../images/menu-icon.png) center center no-repeat;
+        background-size: 100%;
+        margin: 12px 0;
+        cursor: pointer;
+    }
+    .common .hamburgerMenu.open{
+        background-image: url(../images/menu-close-icon.png);
+    }
+    
+}
+
+
+@media only screen and (max-width:500px){
+    .common h1{
+        width: 128px;
+        height: 8px;
+    }
+    .common h1 a{
+        background-size: 100%;
+    }
+    .introduction h2{
+        font-size: 24px;
+    }
+    .introduction p{
+        font-size: 14px;
+        color: #4A4A4A;
+        font-weight: 300;
+    }
+        .common footer nav,
+    .common footer .copy{
+        float: none;
+    }
+    .common footer nav{
+        padding: 0;
+    }
+    .common footer .copy{
+        padding-top: 0;
+        margin-top: 0;
+        padding-left: 10px;
+    }
+    .common .hamburgerMenu{
+        width: 26px;
+        height: 18px;
+        margin: 7px 0;
+    }
+    .common footer{
+        padding: 20px 0;
+    }
+
+
+}

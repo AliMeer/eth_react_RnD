@@ -1,0 +1,123 @@
+/*
+font-family: 'Lato', sans-serif;
+*/
+
+.Pimage{
+    width: 60px;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+}
+.Pimage img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+.cameraB{
+    background: #50E3C2 url(../images/camera.png) center center no-repeat;
+    width: 24px;
+    height: 24px;
+    display: block;
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    border-radius: 50%;
+}
+.profile-card h2{
+    display: inline-block;
+    vertical-align: middle;
+    font: 800 55px 'Lato', sans-serif;
+    color: #626262;
+    padding: 0 20px;
+    margin: 0;
+}
+.formS ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.formS div.full{
+    margin: 0;
+    width: 98%;
+    padding: 0 1%;
+    padding-top: 20px;    
+    clear: both;
+    position: relative;    
+}
+.formS div.halfP{
+    margin: 0;
+    margin-top: 20px;
+    width: 48%;
+    padding: 0 1%;
+    float: left;
+    position: relative;    
+}
+.common .halfP select{
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    background-position:right 50%;
+    background-color: #fff;
+    background-repeat:no-repeat;
+    background-image:url(../images/down-select.png);
+    border: solid 1px #979797;
+    border-radius: 10px;
+    font: 300 14px 'Lato', sans-serif;
+    padding: 5%;
+    outline: none;
+    padding-right:1.5em;
+    width: 100%;
+}
+.common .full select{
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    background-position:right 50%;
+    background-color: #fff;
+    background-repeat:no-repeat;
+    background-image:url(../images/down-select.png);
+    border: solid 1px #979797;
+    border-radius: 10px;
+    font: 300 14px 'Lato', sans-serif;
+    padding: 2.5%;
+    outline: none;
+    padding-right:1.5em;
+    width: 100%;
+}
+.common .error select{
+    border-color: #FF3F3F;
+/*    background: url(../images/error-icon.png) center right no-repeat;    */
+}
+
+.common input{
+    width: 100%;
+    border: solid 1px #979797;
+    border-radius: 10px;
+    font: 300 14px 'Lato', sans-serif;
+    padding: 5%;
+    outline: none;
+}
+.common .full input{
+    width: 100%;
+    border: solid 1px #979797;
+    border-radius: 10px;
+    font: 300 14px 'Lato', sans-serif;
+    padding: 2.5%;
+}
+.common label{
+    font: 300 16px 'Lato', sans-serif;
+    color: #4A4A4A;
+    padding: 0 0 10px 0;
+    margin: 0;
+}
+
+@media only screen and (max-width:500px){
+    .profile-card h2{
+        font-size: 36px;
+    }
+    .formS div.halfP{
+        width: 98%;
+    }
+    .common .full input,
+    .common .full select{
+        padding: 5%;
+    }
+}

@@ -1,0 +1,181 @@
+/*
+font-family: 'Lato', sans-serif;
+*/
+
+.permissionsP h2{
+    font: 800 40px "lato", sans-serif;
+    color: #626262;
+    padding: 0;
+    margin: 0;
+}
+.permissionsF{
+    margin: 20px 0;
+}
+.permissionsP h3{
+    font: 600 20px 'Lato', sans-serif;
+    color: #000;
+    padding: 20px 0;
+    margin: 0;
+    display: inline-block;
+    vertical-align: middle;    
+}
+.permissionsP .closeP{
+    float: right;
+    font: 600 16px/20px 'Lato', sans-serif;
+    color: #BD10E0;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 20px 0;
+}
+.permissionsP p{
+    font: 300 16px 'Lato', sans-serif;
+    color: #626262;
+    padding: 5px 0;
+    margin: 0;
+}
+ul.toggleForms{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.toggleForms li{
+    padding: 15px 0;
+    margin: 0;
+    clear: both;
+}
+.toggleForms label{
+    font: 300 20px 'Lato', sans-serif;
+    color: #000000;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+}
+.toggleForms .toggleSwitch{
+    float: right;
+    -webkit-appearance: unset;
+    width: 45px;
+    height: 24px;
+    background: #D8D8D8;
+    border-radius: 30px;
+    padding: 0;
+    margin: 0;
+    border: none;
+    cursor: pointer;
+    position: relative;
+}
+.toggleForms .toggleSwitch:checked{
+    background: #01DCAB;
+}
+.toggleForms .toggleSwitch:after{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    display: inline-block;
+    position: absolute;
+    content: ' ';
+    top: 2px;
+    left: 2px;
+}
+.toggleForms .toggleSwitch:checked:after{
+    right: 2px;
+    left: auto;
+}
+
+.dataV{
+    border: solid 1px #E5E5E5;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.dataV li{
+    padding: 0;
+    margin: 0;
+    font: 300 16px 'Lato', sans-serif;
+    color: #626262;
+    border-bottom: solid 1px #979797;
+}
+.dataV li:last-child{
+    border: none;
+}
+.dataV li:after{
+    content: "";
+    clear: both;
+    display: table;
+}
+.dataV span{
+    float: left;
+}
+.dataV .headD span{
+    font-weight: bold;
+}
+.dataView span{
+    width: 16%;
+    padding: 15px 2%;
+}
+.dataFile span{
+    width: 16%;
+    padding: 15px 2%;
+}
+
+.whoViewed,
+.dataFileS{
+    padding-top: 60px;
+}
+
+.whoViewed h2,
+.dataFileS h2{
+    padding-bottom: 25px;
+}
+.dataV .actionD{
+    text-align: center;
+}
+.actionD a{
+    background-image: linear-gradient(90deg, #8A23AE 0%, #0043FF 100%, #DB51EC 100%);
+    border-radius: 30px;
+    font:600 16px 'Lato', sans-serif;
+    color: #fff;
+    padding: 5px 15px;;
+    display: block;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+}
+.nameD img{
+    vertical-align: middle;
+    height: 22px;
+    padding-right: 5px;
+}
+
+@media only screen and (max-width: 768px){
+    .dataV .typeD,
+    .dataV .reasonD,
+    .dataV .dateAccessedD,
+    .dataV .fileSizeD,
+    .dataV .fileTypeD,
+    .dataV .dateCreatedD{
+        display: none;
+    }   
+ .dataView span{
+    width: 46%;
+    padding: 15px 2%;
+}
+.dataFile span{
+    width: 46%;
+    padding: 15px 2%;
+}
+    .permissionsP h2{
+        font-size: 36px;
+    }   
+    .permissionsP h3{
+        font-size: 16px;
+    }
+    .permissionsP p{
+        font-size: 14px;
+    }
+    .toggleForms label{
+        font-size: 14px;
+        font-weight: 600;
+    }
+}

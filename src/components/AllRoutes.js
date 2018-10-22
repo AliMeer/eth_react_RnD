@@ -6,6 +6,7 @@ import About from "./About";
 import Contact from "./Contact";
 import Error from "./Error";
 import Login from "./Login";
+import Wallet from "../wallet/wallet"
 import Navigation from "./Navigation";
 
 class AllRoutes extends Component {
@@ -19,6 +20,7 @@ class AllRoutes extends Component {
             <Route path="/about" component={About} />
             <Route path="/contact" component={Contact} />
             <Route path="/Login" component={Login} />
+            <Route path="/wallet" component={Wallet} />
             <Route component={Error} />
           </Switch>
         </div>

@@ -1,0 +1,126 @@
+/*
+font-family: 'Lato', sans-serif;
+*/
+
+.common .full .dobF select{
+    width: 32%;
+    float: left;
+    margin-right: 2%;
+}
+.common .full .dobF select:last-child{
+    margin-right: 0;
+}
+
+.subHeading{    
+    border-bottom: solid 1px #E5E5E5;
+    text-align: center;
+    padding: 10px 0;
+}
+.subHeading h2{
+    float: left;
+    padding: 10px 0 15px 0;
+    margin: 0;
+    font: 200 28px 'Lato', sans-serif;
+    color: #626262;
+}
+.subHeading .steps ul{
+    padding: 0;
+    margin: 0 auto;
+    list-style: none;
+    width: 40%;
+}
+.subHeading .steps li{
+    padding: 0;
+    margin: 0;
+    float: left;
+    text-align: center;
+    margin-right: 1%;
+    position: relative;
+    width: 32.33%;
+    z-index: 9;
+}
+.subHeading .steps li:after{
+    width: 100%;
+      height: 1px;
+      content: ' ';
+      position: absolute;
+      background-color: #979797;
+      top: 18px;
+      left: -42%;
+      z-index: -1;
+}
+
+.subHeading .steps li:first-child:after{
+    display: none;
+}
+.subHeading .steps li:last-child{
+    margin: 0;
+}
+.steps li span{
+    background: #9B9B9B;
+    border-radius: 50%;
+    padding: 10px 15px;
+    display: inline-block;
+    font: 600 14px 'Lato', sans-serif;
+    color: #FFF;
+    margin-bottom: 4px;
+    position: relative;
+    z-index: 9999;
+}
+.steps li p{
+    font: 300 12px 'Lato', sans-serif;
+    color: #9B9B9B;
+    padding: 0;
+    margin: 0;
+}
+
+.subHeading .steps li.active span{
+    background:#01DCAB;
+}
+.steps li.active p{
+    color: #01DCAB;
+    font-weight: bold;
+}
+
+
+@media only screen and (max-width:1024px){
+    .subHeading .steps li:after{
+          left: -35%;
+    }    
+}
+@media only screen and (max-width:768px){
+ .subHeading h2{
+     width: 100%;
+     font: 200 18px 'Lato', sans-serif;
+     color: #626262;
+     border-bottom: solid 1px #E5E5E5;
+     margin: 0;
+     margin-bottom: 10px;
+}
+    .subHeading .widthContain{
+        width: 100%;
+    }
+       
+    .subHeading .steps li:after{
+          left: -35%;
+    }    
+}
+
+@media only screen and (max-width:600px){
+    
+    .subHeading .steps ul{
+        width: 55%;
+    }
+    
+}
+
+@media only screen and (max-width:500px){
+    .subHeading .steps ul{
+        width: 70%;
+    }
+}
+@media only screen and (max-width:350px){
+    .subHeading .steps ul{
+        width: 90%;
+    }
+}

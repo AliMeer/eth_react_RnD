@@ -1,0 +1,40 @@
+/*
+font-family: 'Lato', sans-serif;
+*/
+
+.healthWellness h2{
+    font: 800 55px 'Lato', sans-serif;
+    color: #626262;
+    padding: 0;
+    margin: 0;
+    padding-bottom: 20px;
+}
+
+
+.removeText{
+    position: absolute;
+    bottom: 16px;
+    right: 22px;
+    width: 11px;
+    height: 19px;
+/*    border: solid 1px #000;*/
+    overflow: hidden;
+    text-indent: -9999px;
+    display: block;
+    background: url(../images/remove-icon.png) center center no-repeat;
+    cursor: pointer;
+}
+
+.formS div.halfP.pre-existing,
+.formS div.halfP.pre-existingSecond{
+    margin-top: 0;
+}
+
+@media only screen and (max-width:500px){
+    .formS div.halfP.pre-existingSecond{
+        margin-top: 20px;
+    }
+    .healthWellness h2{
+        font-size: 36px;
+    }    
+}

@@ -1,0 +1,278 @@
+/*
+font-family: 'Lato', sans-serif;
+*/
+
+/*
+.signIn body, html.signIn {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display:table;
+}
+.signIn body {
+    display:table-cell;
+    vertical-align:middle;
+    background: #F5F5F5;
+    padding-top: 67px;
+    padding-bottom: 37px;
+}
+*/
+
+html{
+    margin: 0;
+    padding: 0;    
+}
+body{
+    background: #F5F5F5;
+}
+
+.signIn header{
+    padding: 20px 0;
+}
+.signIn header h1{
+    display: block;
+    width: 223px;
+    height: 27px;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    text-indent: -9999px;
+    background: url(../images/Shivom_Logo_Gradient.png) no-repeat;
+}
+
+.middle-row{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+    height: 100%;
+    padding-top: 30px;
+}
+
+.middle-row .signInBox{
+}
+
+.signInBox {
+/*    display:table;*/
+    margin:20px auto;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+.signInBox p{
+    color: #6A6A6A;
+    font-size: 16px;
+}
+.BoxS{
+    background: #fff;
+    padding: 30px 40px;
+    border: solid 1px #E5E5E5;
+    text-align: left;
+}
+
+.signIn header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #fff;
+}
+.signIn footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #fff;
+}
+footer nav{
+    float: left;
+}
+footer nav ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+footer nav li{
+    float: left;
+    padding: 0;
+    margin: 10px;
+    font-size: 14px;
+}
+footer nav li a{
+    color: #6A6A6A;
+}
+footer nav li a:hover{
+    color: #9013FE;
+}
+.signIn footer .copy{
+    float: right;
+    padding: 10px;
+    margin: 0;
+    font: 14px 'Lato', sans-serif;
+    color: #6A6A6A;
+}
+.copy strong{
+    font-weight: bold;
+}
+.BoxS ul{
+    padding: 0;
+    margin: 0;
+}
+.BoxS li{
+    padding:0;
+    margin: 0;
+    list-style: none;
+}
+.BoxS h2{
+    font:600 28px 'Lato', sans-serif;
+    color: #7C7C7C;
+    padding: 0;
+    margin: 0;
+}
+.boxS span{
+    padding: 10px 0;
+    font: 300 16px 'Lato', sans-serif;
+    color: #828282;
+    display: block;
+}
+.emailS,
+.passwordS{
+    padding: 5%;
+    width: 100%;
+    margin: 10px 0;
+    border: solid 1px #979797;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 200;
+    outline: none;
+}
+.submitS{
+    background-image: linear-gradient(90deg, #8A23AE 0%, #0043FF 100%, #DB51EC 100%);
+    border-radius: 5px;
+    font:600 16px 'Lato', sans-serif;
+    color: #fff;
+    border-radius: 30px;
+    width: 100%;
+    padding: 5%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.alternateS{
+    background:#fff;
+    border-radius: 5px;
+    font:600 16px 'Lato', sans-serif;
+    color: #BD10E0;
+    border-radius: 30px;
+    width: 100%;
+    padding: 5%;
+    border: none;
+    outline: none;
+    cursor: pointer;    
+    margin-top: 5px;
+    border: solid 1px transparent;
+    background-image: linear-gradient(white, white), radial-gradient(circle at top left, #3023AE,#C86DD7);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+}
+
+
+.forgotP a{
+    padding: 5px 0 15px 0;
+    display: block;
+}
+
+.checkboxS{
+    float: left;
+    border-radius: 2px;
+    border: 1px solid #979797;
+    box-sizing: border-box;
+    position: relative;
+    box-sizing: content-box ;
+    width: 20px;
+    height: 20px;
+     -webkit-appearance: unset;    
+}
+.checkboxS:checked{
+    background: url(../images/checked-box.png) center center no-repeat;
+}
+label{
+    float: left;
+    width: 82%;
+    font: 14px 'Lato', sans-serif;
+    color:#6A6A6A;
+    margin-left: 5px;
+}
+.BoxS li.iagree{
+    padding: 0 0 10px 0;
+}
+.boxS li.forgot-Submit{
+    margin-top: 30px;
+}
+
+@media only screen and (max-height: 500px) {
+    body{
+        padding: 0;
+    }
+    .signIn header,
+    .signIn footer{
+        position: static;
+    }
+    .signIn footer{
+        margin-top: 30px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    body{
+        background: #fff;
+    }
+    .signInBox{
+        background: #fff;
+        margin:auto;
+        text-align: left;
+    }
+    .signInBox p{
+        margin: 10px 40px 20px 40px;
+    }
+    .signIn .widthContain{
+        width: auto;
+        margin: 0 40px;
+    }
+    .signIn header{
+        border-bottom:solid 1px #E5E5E5;
+    }
+    .signIn footer .copy,
+    .signIn footer nav
+    {
+        float: none;
+        padding: 5px 0;
+        margin: 0;
+    }
+    .signIn footer{
+        padding: 20px 0;
+    }
+    .signIn footer nav li{
+        margin: 0;
+        padding: 0;
+        padding-right: 15px;
+    }
+    .BoxS{
+        border: none;
+    }
+    .BoxS h2{
+        font-size: 18px;
+    }
+    .emailS, .passwordS,
+    .forgotP a,
+    .submitS,
+    .alternateS,
+    .signInBox p,
+    .boxS span{
+        font-size: 14px;
+    }
+    .signIn footer .copy{
+        font-size: 12px;
+    }
+    .boxS li.forgot-Submit{
+        margin-top: 10px;
+    }
+}

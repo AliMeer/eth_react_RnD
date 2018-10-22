@@ -1,6 +1,8 @@
 import { CONTRACT_ADDRESS } from "./constants";
 import Web3 from "web3";
+import { MAINNET_CONTRACT_ADDRESS } from './constants'
 
+var contractAddress = MAINNET_CONTRACT_ADDRESS
 var web3;
 const Eth = require("ethjs-query");
 const EthContract = require("ethjs-contract");
@@ -13,11 +15,13 @@ class BlockChainConnector {
     web3 = window.web3;
   }
 
+  //Return the current web3 object from the browser
   provider() {
-    // return web3.currentProvider;
     return window.web3;
   }
 
+  //Check if a ether wallet extension is installed on the browser
+  //Also check if the wallter extension is Metamask
   isAvailable() {
     
     return new Promise((resolve, reject) => {
@@ -30,6 +34,8 @@ class BlockChainConnector {
       }
     });
   }
+
+  //Check if the wallet extension is logged in 
   isUnlocked() {
    
     return new Promise((resolve, reject) => {
@@ -47,6 +53,8 @@ class BlockChainConnector {
     });
   }
 
+  //Get the public addressof the user's wallet
+
   defaultAccount() {
    
     return new Promise((resolve, reject) => {
@@ -56,13 +64,13 @@ class BlockChainConnector {
         } else if (accounts.length === 0) {
           resolve('');
         } else {
-           
           resolve(accounts[0]);
         }
       });
     });
   }
 
+  //Get the number of ether in the user's wallet
   getBalance(acc) {
       
     return new Promise((resolve, reject) => {
@@ -71,12 +79,54 @@ class BlockChainConnector {
         if (err !== null) {
           reject(err);
         } else {
-          const _balance = web3.utils.fromWei(balance, 'ether');
-          resolve(_balance);
+          //const _balance = web3.utils.fromWei(balance, 'ether');
+          resolve(balance);
         }
       });
     });
   }
+
+getOMXBalance(walletAddress) {
+  console.log("Inside getOMXBalance");
+  let minABI = [
+      // balanceOf
+      {
+        "constant":true,
+        "inputs":[{"name":"_owner","type":"address"}],
+        "name":"balanceOf",
+        "outputs":[{"name":"balance","type":"uint256"}],
+        "type":"function"
+      },
+      // decimals
+      {
+        "constant":true,
+        "inputs":[],
+        "name":"decimals",
+        "outputs":[{"name":"","type":"uint8"}],
+        "type":"function"
+      }
+    ];
+    return new Promise((resolve, reject) => {
+        
+      //  OMX Token contract
+    let contract = web3.eth.contract(minABI).at(contractAddress);
+    // calling OMX contract method to get balance
+    contract.balanceOf(walletAddress, (error, balance) => {
+
+      
+        if (error !== null) {
+          console.log("Inside getOMXBalance Error");
+          reject(error);
+        } else {
+          //const _balance = web3.utils.fromWei(balance, 'ether');
+          console.log("Inside Resolve " + balance);
+          resolve(balance);
+        }
+      });
+    });
+
+  }
+
 
   signData(data, address) {
     return new Promise((resolve, reject) => {
