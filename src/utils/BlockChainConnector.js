@@ -1,8 +1,6 @@
 import { CONTRACT_ADDRESS } from "./constants";
 import Web3 from "web3";
-import { MAINNET_CONTRACT_ADDRESS } from './constants'
 
-var contractAddress = MAINNET_CONTRACT_ADDRESS
 var web3;
 const Eth = require("ethjs-query");
 const EthContract = require("ethjs-contract");
@@ -86,7 +84,7 @@ class BlockChainConnector {
     });
   }
 
-getOMXBalance(walletAddress) {
+getOMXBalance(contractAddress,walletAddress) {
   console.log("Inside getOMXBalance");
   let minABI = [
       // balanceOf
