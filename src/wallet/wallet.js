@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import blockChainConnector from "../utils/BlockChainConnector";
 import { MAINNET_INFO,RINKEBY_INFO } from "../utils/constants";
+import { Z_BINARY } from "zlib";
 
 const ETHERNET = RINKEBY_INFO;
 class Wallet extends Component {
@@ -51,7 +52,9 @@ class Wallet extends Component {
     blockChainConnector
       .isAvailable()
       .catch(e => this.setState({ isWalletAvailable: false }))
-      .then(r => this.setState({ isWalletAvailable: r }));
+      .then((r) => this.setState({ isWalletAvailable: r }));
+
+
 
     blockChainConnector
       .isUnlocked()
@@ -85,14 +88,7 @@ class Wallet extends Component {
         "&contractaddress=" +
         ETHERNET.CONTRACT_ADDRESS +
         "&address=" +
-        this.state.walletAccount,
-      {
-        headers: {
-          "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE",
-          "Content-Type": "application/json",
-          "Access-Control-Allow-Origin": "http://localhost:3000"
-        }
-      }
+        this.state.walletAccount
     )
       .catch(e => console.log(e))
       .then(response => response.json())
@@ -105,14 +101,7 @@ class Wallet extends Component {
     fetch(
         ETHERNET.API_URL_RATE_ROOT +
         ETHERNET.TICKER_ID_OMX +
-        ETHERNET.GBP_OPTION,
-      {
-        headers: {
-          "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE",
-          "Content-Type": "application/json",
-          "Access-Control-Allow-Origin": "*"
-        }
-      }
+        ETHERNET.GBP_OPTION
     )
       .then(response => response.json())
       .then(data => this.setState({ OMXGBP: data.data.quotes.GBP.price }));
@@ -121,14 +110,7 @@ class Wallet extends Component {
     fetch(
         ETHERNET.API_URL_RATE_ROOT +
         ETHERNET.TICKER_ID_ETH +
-        ETHERNET.GBP_OPTION,
-      {
-        headers: {
-          "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE",
-          "Content-Type": "application/json",
-          "Access-Control-Allow-Origin": "http://localhost:3000"
-        }
-      }
+        ETHERNET.GBP_OPTION
     )
       .then(response => response.json())
       .then(data => this.setState({ EtherGBP: data.data.quotes.GBP.price }));
@@ -145,14 +127,7 @@ class Wallet extends Component {
         "&contractaddress=" +
         ETHERNET.CONTRACT_ADDRESS +
         "&address=" +
-        this.state.walletAccount,
-      {
-        headers: {
-          "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE",
-          "Content-Type": "application/json",
-          "Access-Control-Allow-Origin": "http://localhost:3000"
-        }
-      }
+        this.state.walletAccount
     )
       .catch(e => console.log(e))
       .then(response => response.json())

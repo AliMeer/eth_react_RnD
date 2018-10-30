@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "crypto": "^1.0.1",
+    "eth-crypto": "^1.2.4",
     "ethjs-contract": "^0.2.3",
     "ethjs-query": "^0.3.8",
     "react": "^16.3.2",
